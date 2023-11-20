@@ -1,0 +1,79 @@
+:root
+{
+    --color-background: #f6f6f9;
+    --color-white: #fff;
+    --color-dark: #363949;
+    --opacity-moon: 1;
+    --opacity-sun: 0;
+
+}
+.dark
+{
+    --color-background: #181a1e;
+    --color-white: #202528;
+    --color-dark: #edeffd;
+    --opacity-sun: 1;
+    --opacity-moon:0;
+}
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.content
+{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-background);
+    transition: 0.6 linear;
+}
+.checkbox
+{
+    opacity: 0;
+    position: absolute;
+}
+.label
+{
+    width: 50px;
+    height: 26px;
+    background: var(--color-dark);
+    border-radius: 50px;
+    padding: 5px;
+    display: flex;
+    position: absolute;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+.ball
+{
+    width: 22px;
+    height: 22px;
+    background: var(--color-white);
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.checkbox:checked+ .label .ball
+{
+    transform: translateX(24px);
+}
+.sun
+{
+    opacity: var(--opacity-sun);
+    color: #ebc11a;
+    background: 2s var(--color-white);
+}
+.moon
+{
+    opacity: var(--opacity-moon);
+    color: #9c9c9c;
+    background: 2s var(--color-dark);
+}
